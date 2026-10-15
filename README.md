@@ -30,10 +30,18 @@ Copy the client ID and generate a client secret.
 
 ### 3. Backend
 
+Put the credentials in `booking-app/.env` (gitignored; see `.env.example`):
+
+```
+GITHUB_CLIENT_ID=your-client-id
+GITHUB_CLIENT_SECRET=your-client-secret
+```
+
+Environment variables with the same names work too, as long as they are set in
+the same shell (or IDE run configuration) that starts the backend.
+
 ```bash
 cd booking-app
-export GITHUB_CLIENT_ID=your-client-id
-export GITHUB_CLIENT_SECRET=your-client-secret
 ./mvnw spring-boot:run
 ```
 
